@@ -74,17 +74,17 @@ Teachable Machine is a Low-Code-AI tool that helps to train simple AI models to 
 
 **Step 02:** Click “Get Started Button”:
 
-![IMAGE](docs/media/1.jpg)
+![IMAGE](docs/media/3-tm-image.jpg)
 
 **Step 03:** Select “Image Project” and choose “Standard Image Model”:
 
-![IMAGE](docs/media/2.jpg)
+![IMAGE](docs/media/4-tm-image.jpg)
 
 **Step 04:** Collect Dataset
 
 **Step 05:** Start Training
 
-![IMAGE](docs/media/3.jpg)
+![IMAGE](docs/media/5-tm-image.jpg)
 
 **Note:** After that, other steps are self-explanatory: create classes according to your needs; then add data to the relevant classes and click train to start the training process. Apart from this, advanced settings can be changed to improve performance and accuracy. The model can be uploaded online or downloaded locally; it also provides basic code to infer the model in Python, a Web App (TensorFlow | TensorFlowJS | TensorFlow Litte).
 
