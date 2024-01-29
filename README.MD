@@ -62,6 +62,7 @@ To run the app, please proceed with the following steps.
 
 ## 05 Output
 
+[2-output-video.webm](https://github.com/gunarakulangunaretnam/abcd-detector/assets/45822509/83205115-662d-4a41-83a2-b6ffba62e08f)
 
 ## Train AI models with the Teachable Machine.
 
