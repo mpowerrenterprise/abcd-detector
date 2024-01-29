@@ -4,6 +4,10 @@ import pyttsx3
 import numpy as np
 from keras.models import load_model  # TensorFlow is required for Keras to work
 
+def TextToSpeech(text):
+    print("Computer: {}",format(text))
+    engine.say(text)
+    engine.runAndWait()
 
 engine = pyttsx3.init()
 engine.setProperty('rate', 90)     # setting up new voice rate
@@ -27,11 +31,14 @@ while True:
     # Grab the webcamera's image.
     ret, image = camera.read()
 
+    window_image = image.copy()
+
+    # Show the image in a window
+    cv2.imshow("ABCD Detector", window_image)
+
     # Resize the raw image into (224-height,224-width) pixels
     image = cv2.resize(image, (224, 224), interpolation=cv2.INTER_AREA)
 
-    # Show the image in a window
-    cv2.imshow("Webcam Image", image)
 
     # Make the image a numpy array and reshape it to the models input shape.
     image = np.asarray(image, dtype=np.float32).reshape(1, 224, 224, 3)
@@ -45,31 +52,24 @@ while True:
     class_name = class_names[index]
     confidence_score = prediction[0][index]
 
+
     # Print prediction and confidence score
-    print("Class:", class_name[2:], end="")
-    print("Confidence Score:", str(np.round(confidence_score * 100))[:-2], "%")
+    #print("Class:", class_name[2:], end="")
+    #print("Confidence Score:", str(np.round(confidence_score * 100))[:-2], "%")
 
     if class_name[2:].strip() == "a":
-        engine.say("A")
-        engine.runAndWait()
+        TextToSpeech("A")
 
     elif class_name[2:].strip() == "b":
-        engine.say("B")
-        engine.runAndWait()
-
+        TextToSpeech("B")
 
     elif class_name[2:].strip() == "c":
-        engine.say("C")
-        engine.runAndWait()
+        TextToSpeech("C")
 
     elif class_name[2:].strip() == "d":
-        engine.say("D")
-        engine.runAndWait()
+        TextToSpeech("D")
 
-
-    
     time.sleep(1)
-
 
     # Listen to the keyboard for presses.
     keyboard_input = cv2.waitKey(1)
