@@ -63,7 +63,6 @@ To run the app, please proceed with the following steps.
 ## 05 Output
 
 
-
 ## Train AI models with the Teachable Machine.
 
 Teachable Machine is a Low-Code-AI tool that helps to train simple AI models to recognize images, sounds, & poses without coding experience. This tool is a gateway for beginners and enthusiasts, allowing them to train simple machine-learning models without extensive programming knowledge.
